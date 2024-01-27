@@ -1,19 +1,19 @@
 import {Component} from '@angular/core';
 import {BackgroundComponent} from "../background/background.component";
-import {NavigationBarComponent} from "../navigation-bar/navigation-bar.component";
 import {TabType} from "../../enums/tabType.enum";
+import {NavigationBarComponent} from "../navigation-bar/navigation-bar.component";
 
 @Component({
-    selector: 'projects-page',
+    selector: 'app-experience-page',
     standalone: true,
     imports: [
         BackgroundComponent,
         NavigationBarComponent
     ],
-    templateUrl: './projects-page.component.html',
-    styleUrl: './projects-page.component.scss'
+    templateUrl: './experience-page.component.html',
+    styleUrl: './experience-page.component.scss'
 })
-export class ProjectsPageComponent {
+export class ExperiencePageComponent {
 
     protected readonly TabType = TabType;
 }

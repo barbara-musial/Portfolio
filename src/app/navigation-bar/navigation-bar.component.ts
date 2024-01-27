@@ -1,15 +1,19 @@
-import {Component} from '@angular/core';
-import {MainPageComponent} from "../main-page/main-page.component";
+import {Component, Input} from '@angular/core';
 import {RouterLink, RouterOutlet} from "@angular/router";
+import {TabType} from "../../enums/tabType.enum";
+import {NgClass} from "@angular/common";
 
 @Component({
     selector: 'navigation-bar',
     standalone: true,
     imports: [
-        RouterOutlet, RouterLink
+        RouterOutlet, RouterLink, NgClass
     ],
     templateUrl: './navigation-bar.component.html',
     styleUrl: './navigation-bar.component.scss'
 })
 export class NavigationBarComponent {
+    @Input() activeTab!: TabType
+    @Input() blurred = false;
+    protected readonly TabType = TabType;
 }
