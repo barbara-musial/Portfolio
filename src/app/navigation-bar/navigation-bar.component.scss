@@ -1,0 +1,7 @@
+@import "../../variables";
+
+:host {
+  display: block;
+  height: $navigation-bar-height;
+  width: 100%;
+}

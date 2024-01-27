@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&family=Teko:wght@300;400;500;600;700&display=swap');
+@import "../../variables";
+
+
+.wrapper {
+  position: relative;
+  height: 100vh;
+  background-color: $main-color-lighter-pink;
+
+  .photo-wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    z-index: 2;
+
+    .photo {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .black-box {
+    position: absolute;
+    bottom: 0;
+    height: 48.6%;
+    width: 100%;
+    background-color: $main-color-black;
+    z-index: 1;
+  }
+}
+
+.opacity-wrapper {
+  padding-right: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: grayscale(5%) blur(8px);
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 52vw;
+
+  .timeline-wrapper {
+    position: relative;
+    height: 50%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .timeline {
+      position: absolute;
+      height: 100%;
+      width: 3px;
+      background-color: $main-color-pink;
+    }
+
+    .timeline-point {
+      display: inline-block;
+      height: 25px;
+      width: 25px;
+      background-color: $main-color-pink;
+      border-radius: 50%;
+      z-index: 1;
+      border: 5px solid $main-color-pink;
+
+      &.light {
+        background-color: $main-color-lighter-pink;
+      }
+
+      &.dark {
+        background-color: $main-color-black;
+      }
+
+      &.active {
+        background-color: $main-color-pink;
+      }
+    }
+  }
+
+
+  .subpages-wrapper {
+    height: 50%;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 1.2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .subpage {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+    }
+
+    a {
+      font-size: $subpages-font-size;
+      text-decoration: none;
+      line-height: 100%;
+
+      &.light {
+        color: $main-color-lighter-pink;
+      }
+
+      &.dark {
+        color: $main-color-black;
+      }
+
+      &.active {
+        font-weight: 600;
+      }
+    ;
+    }
+  }
+}
