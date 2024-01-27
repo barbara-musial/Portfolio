@@ -2,7 +2,7 @@
 @import "../../variables";
 
 
-.wrapper {
+.background-wrapper {
   position: relative;
   height: 100vh;
   background-color: $main-color-lighter-pink;
@@ -30,6 +30,54 @@
     width: 100%;
     background-color: $main-color-black;
     z-index: 1;
+  }
+}
+
+.intro-wrapper {
+  padding: 0 10%;
+  height: 100vh;
+  width: 48vw;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40vh;
+  font-family: 'Manrope', sans-serif;
+
+  .name-wrapper {
+    color: $main-color-black;
+    text-align: right;
+    width: 100%;
+
+    h1 {
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      font-family: 'Teko', sans-serif;
+      font-size: $name-font-size;
+    }
+  }
+
+  .animated-text-wrapper {
+    text-align: right;
+    width: 100%;
+    color: $main-color-lighter-pink;
+
+    .animated-text {
+      .blink {
+        border-right-style: solid;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        to {
+          opacity: 0;
+        }
+      }
+    }
   }
 }
 
@@ -85,7 +133,6 @@
       }
     }
   }
-
 
   .subpages-wrapper {
     height: 50%;

@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="background-wrapper">
     <div class="photo-wrapper">
         <img class="photo" src="assets/photo.png">
     </div>
@@ -17,5 +17,20 @@
         <div class="subpage"><a class="dark" href="#">O mnie</a></div>
         <div class="subpage"><a class="light" href="#">Blog</a></div>
         <div class="subpage"><a class="light" href="#">Kontakt</a></div>
+    </div>
+</div>
+<div class="intro-wrapper">
+    <div class="name-wrapper">
+        <h2>Hi! My name is</h2>
+        <h1>Barbara Musiał</h1>
+    </div>
+    <div class="animated-text-wrapper">
+        <h3>I am</h3>
+        <type-delete-text-cmp
+                [wordArray]="positions"
+                [textColor]="'#f5ecef'"
+                [fontSize]="'48px'"
+                [blinkWidth]="'4px'"
+        ></type-delete-text-cmp>
     </div>
 </div>
