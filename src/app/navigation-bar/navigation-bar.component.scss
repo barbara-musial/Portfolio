@@ -1,7 +1,83 @@
 @import "../../variables";
 
 :host {
-  display: block;
-  height: $navigation-bar-height;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-wrapper {
+  position: relative;
+  height: 50%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .timeline {
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background-color: $main-color-pink;
+  }
+
+  .timeline-point {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: $main-color-pink;
+    border-radius: 50%;
+    z-index: 1;
+    border: 5px solid $main-color-pink;
+
+    &.light {
+      background-color: $main-color-lighter-pink;
+    }
+
+    &.dark {
+      background-color: $main-color-black;
+    }
+
+    &.active {
+      background-color: $main-color-pink;
+    }
+  }
+}
+
+.subpages-wrapper {
+  height: 50%;
+  font-family: 'Teko', sans-serif;
+  letter-spacing: 1.2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .subpage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  a {
+    font-size: $subpages-font-size;
+    text-decoration: none;
+    line-height: 100%;
+
+    &.light {
+      color: $main-color-lighter-pink;
+    }
+
+    &.dark {
+      color: $main-color-black;
+    }
+
+    &.active {
+      font-weight: 600;
+    }
+  ;
+  }
 }

@@ -1,0 +1,32 @@
+@import "../../variables";
+
+.background-wrapper {
+  position: relative;
+  height: 100vh;
+  background-color: $main-color-lighter-pink;
+
+  .photo-wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    z-index: 2;
+
+    .photo {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .black-box {
+    position: absolute;
+    bottom: 0;
+    height: 48.6%;
+    width: 100%;
+    background-color: $main-color-black;
+    z-index: 1;
+  }
+}
