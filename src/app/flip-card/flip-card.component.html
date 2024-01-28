@@ -6,7 +6,8 @@
 
             </div>
         </div>
-        <div class="tp-box__side back" [ngStyle]="{background: bgBack, color: 'white'}">{{ backText }}
+        <div class="tp-box__side back">
+            <ng-container [ngTemplateOutlet]="backTemplate"></ng-container>
         </div>
     </div>
 </div>

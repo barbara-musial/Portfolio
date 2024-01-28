@@ -2,7 +2,19 @@
 <navigation-bar [activeTab]="TabType.AboutMePage"></navigation-bar>
 
 <div class="cards-wrapper">
-    <flip-card [frontText]="'Description'" [frontIconSrc]="'../../assets/record-book.png'"></flip-card>
-    <flip-card [frontText]="'Education'" [frontIconSrc]="'../../assets/online-education.png'"></flip-card>
-    <flip-card [frontText]="'Experience'" [frontIconSrc]="'../../assets/human-brain.png'"></flip-card>
+    <flip-card [frontText]="'Description'"
+               [backTemplate]="description"></flip-card>
+    <ng-template #description>
+        <description-card></description-card>
+    </ng-template>
+    <flip-card [frontText]="'Education'"
+               [backTemplate]="education"></flip-card>
+    <ng-template #education>
+        <education-card></education-card>
+    </ng-template>
+    <flip-card [frontText]="'Experience'"
+               [backTemplate]="experience"></flip-card>
+    <ng-template #experience>
+        <experience-card></experience-card>
+    </ng-template>
 </div>

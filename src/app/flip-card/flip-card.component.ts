@@ -1,12 +1,13 @@
 import {Component, Input} from '@angular/core';
 import {animate, state, style, transition, trigger} from "@angular/animations";
-import {NgStyle} from "@angular/common";
+import {NgStyle, NgTemplateOutlet} from "@angular/common";
 
 @Component({
     selector: 'flip-card',
     standalone: true,
     imports: [
-        NgStyle
+        NgStyle,
+        NgTemplateOutlet
     ],
     templateUrl: './flip-card.component.html',
     styleUrl: './flip-card.component.scss',
@@ -25,13 +26,10 @@ import {NgStyle} from "@angular/common";
 })
 export class FlipCardComponent {
     @Input() bgFront: string = 'rgba(0, 0, 0, 0.2)';
-    @Input() bgBack: string = 'black';
     @Input() frontText: string = 'Test';
-    @Input() frontIconSrc: string = '../../assets/human-brain.png'
-    @Input() backText: string = 'Test2'
+    @Input() backTemplate!: any;
 
-
-    flip: string = 'inactive';
+    flip: string = 'active';
 
     toggleFlip() {
         this.flip = (this.flip == 'inactive') ? 'active' : 'inactive';
