@@ -1,11 +1,8 @@
 <background></background>
 <navigation-bar [activeTab]="TabType.AboutMePage"></navigation-bar>
-<div class="blurred"></div>
 
-<div class="wrapper">
-
-    <div class="info-wrapper">
-
-    </div>
-    <div class="opacity-wrapper"></div>
+<div class="cards-wrapper">
+    <flip-card [frontText]="'Description'" [frontIconSrc]="'../../assets/record-book.png'"></flip-card>
+    <flip-card [frontText]="'Education'" [frontIconSrc]="'../../assets/online-education.png'"></flip-card>
+    <flip-card [frontText]="'Experience'" [frontIconSrc]="'../../assets/human-brain.png'"></flip-card>
 </div>

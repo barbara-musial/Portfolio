@@ -15,5 +15,6 @@ import {NgClass} from "@angular/common";
 export class NavigationBarComponent {
     @Input() activeTab!: TabType
     @Input() blurred = false;
+    @Input() doubleColorBg = false;
     protected readonly TabType = TabType;
 }
