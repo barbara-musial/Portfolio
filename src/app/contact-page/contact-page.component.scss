@@ -1,0 +1,154 @@
+@import "../../variables";
+
+.contact-wrapper {
+  box-sizing: border-box;
+  position: absolute;
+  height: 100vh;
+  width: 60vw;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 20px;
+  align-items: center;
+  background: linear-gradient(-45deg, $main-color-black, $main-color-grey, $main-color-pink, $main-color-lighter-pink);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .icons-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .links-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .link-wrapper {
+        position: relative;
+
+        &:hover {
+          copy-tooltip {
+            visibility: visible;
+          }
+        }
+
+        a {
+          cursor: pointer;
+
+          img {
+            width: 80px;
+
+          }
+        }
+
+      }
+    }
+
+    .contact-popup-wrapper {
+      position: relative;
+
+      .contact-form-wrapper {
+
+        bottom: 50px;
+        right: 50px;
+        z-index: 1;
+        position: absolute;
+        border: 3px solid $main-color-light-pink;
+        padding: 20px;
+        width: 400px;
+        background-color: $main-color-lighter-pink;
+        font-family: 'Teko', sans-serif;
+        border-radius: 10px;
+
+        &.hidden {
+          display: none;
+        }
+
+        h1 {
+          font-size: 48px;
+          margin: 0;
+          font-weight: 400;
+          letter-spacing: 1px;
+        }
+
+        form {
+          input, textarea {
+            border-radius: 10px;
+            border: 1px solid $main-color-light-pink;
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 20px;
+            font-family: 'Teko', sans-serif;
+            font-weight: 200;
+            letter-spacing: 0.8px;
+            padding: 5px;
+            margin: 5px 0;
+          }
+
+          textarea {
+            resize: none;
+            height: 200px;
+          }
+
+          button {
+            font-family: 'Teko', sans-serif;
+            font-size: 24px;
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: 3px solid $main-color-light-pink;
+            background-color: $main-color-light-pink;
+            cursor: pointer;
+            box-sizing: border-box;
+            color: $main-color-lighter-pink;
+
+            &:hover {
+              background-color: $main-color-lighter-pink;
+              color: $main-color-pink;
+              transition: .3s;
+            }
+          }
+        ;
+
+        }
+      }
+
+      .popup-bg {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        background-color: $main-color-grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0px 0 10px 1px $main-color-black;
+
+        img {
+          width: 50px;
+          filter: invert(96%) sepia(100%) saturate(4%) hue-rotate(94deg) brightness(105%) contrast(100%);
+        }
+      }
+    }
+  }
+
+}

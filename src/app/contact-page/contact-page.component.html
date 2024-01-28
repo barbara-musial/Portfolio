@@ -1,2 +1,40 @@
 <background></background>
 <navigation-bar [activeTab]="TabType.ContactPage"></navigation-bar>
+
+<div class="contact-wrapper">
+    <div class="icons-wrapper">
+        <div class="links-wrapper">
+            <div class="link-wrapper">
+                <a><img src="assets/google-hangouts.png"></a>
+                <copy-tooltip [valueToCopy]="'barbara.musial99@gmail.com'"></copy-tooltip>
+            </div>
+            <div class="link-wrapper">
+                <a href="https://www.instagram.com/must_have_dev/" target="_blank"><img src="assets/instagram-logo.png"></a>
+                <copy-tooltip [valueToCopy]="'must_have_dev'"></copy-tooltip>
+            </div>
+            <div class="link-wrapper">
+                <a href="https://www.linkedin.com/in/barbara-musia%C5%82/" target="_blank"><img
+                        src="assets/linkedin-logo.png"></a>
+                <copy-tooltip [valueToCopy]="'Barbara Musiał'"></copy-tooltip>
+            </div>
+        </div>
+        <div class="contact-popup-wrapper">
+            <div class="contact-form-wrapper" [ngClass]="{'hidden': !contactFormOpen}">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <h1>Contact me!</h1>
+                    <input type="hidden" name="access_key" value="b1f3be47-5e42-4191-aab8-6d9bd8dca0c5">
+                    <input class="name-input" type="text" name="name" placeholder="Your name" required>
+                    <input class="email-input" type="email" name="email" placeholder="Your e-mail" required>
+                    <textarea name="message" placeholder="Message..." required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+
+            </div>
+            <div class="popup-bg" (click)="toggleFormOpen($event)">
+                <img src="assets/contact-form.png">
+            </div>
+        </div>
+    </div>
+</div>
+

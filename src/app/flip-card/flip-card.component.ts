@@ -25,11 +25,11 @@ import {NgStyle, NgTemplateOutlet} from "@angular/common";
     ]
 })
 export class FlipCardComponent {
-    @Input() bgFront: string = 'rgba(0, 0, 0, 0.2)';
+    @Input() bgFront: string = 'rgba(0, 0, 0, 0.5)';
     @Input() frontText: string = 'Test';
     @Input() backTemplate!: any;
 
-    flip: string = 'active';
+    flip: string = 'inactive';
 
     toggleFlip() {
         this.flip = (this.flip == 'inactive') ? 'active' : 'inactive';

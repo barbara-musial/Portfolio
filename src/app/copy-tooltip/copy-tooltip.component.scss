@@ -1,0 +1,53 @@
+@import "../../variables";
+
+:host {
+  visibility: hidden;
+}
+
+.tooltip-wrapper {
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 0;
+
+  .tooltip {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: $main-color-light-pink;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+
+    ::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 40px;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: $main-color-light-pink transparent transparent transparent;
+    }
+
+    .text-wrapper {
+      .tooltip-text {
+        margin: 0;
+        font-family: 'Manrope', sans-serif;
+        text-wrap: nowrap;
+        color: $main-color-black;
+      }
+    }
+
+    .icon-wrapper {
+      cursor: pointer;
+
+      img {
+        width: 20px;
+        filter: invert(86%) sepia(4%) saturate(229%) hue-rotate(288deg) brightness(108%) contrast(101%);
+      }
+    }
+  }
+
+}

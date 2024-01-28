@@ -1,9 +1,8 @@
 <div class="tp-wrapper">
     <div class="tp-box" (click)="toggleFlip()" [@flipState]="flip">
-        <div class="tp-box__side front" [ngStyle]="{background: bgFront, color: 'black'}">
+        <div class="tp-box__side front" [ngStyle]="{background: bgFront}">
             <div class="content-wrapper">
                 <div class="text-wrapper"><h2>{{ frontText }}</h2></div>
-
             </div>
         </div>
         <div class="tp-box__side back">
