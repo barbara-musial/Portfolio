@@ -29,7 +29,7 @@ export class FlipCardComponent {
     @Input() frontText: string = 'Test';
     @Input() backTemplate!: any;
 
-    flip: string = 'active';
+    flip: string = 'inactive';
 
     toggleFlip() {
         this.flip = (this.flip == 'inactive') ? 'active' : 'inactive';
