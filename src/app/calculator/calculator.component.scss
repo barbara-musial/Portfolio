@@ -1,0 +1,87 @@
+@import "../../variables";
+
+.calculator {
+  background-color: $main-color-lighter-pink;
+  font-family: 'Teko', sans-serif;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  color: $main-color-black;
+
+  h2 {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  label {
+    font-size: 20px;
+    color: $main-color-grey;
+    letter-spacing: 0.8px;
+    margin: 20px 0 5px 0;
+    text-align: left;
+    display: block;
+    font-weight: 500;
+  }
+
+  select,
+  input {
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 1px;
+    color: $main-color-pink;
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+
+    &::placeholder {
+      color: $main-color-pink;
+      letter-spacing: 1px;
+    }
+  }
+
+  button {
+    box-sizing: content-box;
+    width: 50%;
+    border: 1px solid $main-color-grey;
+    background-color: $main-color-grey;
+    font-family: 'Teko', sans-serif;
+    color: $main-color-lighter-pink;
+    margin: 20px 0;
+    font-size: 24px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $main-color-lighter-pink;
+      color: $main-color-grey;
+
+    }
+  }
+
+  h3 {
+    color: $main-color-black;
+    text-align: center;
+    font-size: 28px;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  #total-cost {
+    font-size: 36px;
+    font-weight: bold;
+    color: $main-color-pink;
+    margin: 0;
+
+  }
+}
+
+

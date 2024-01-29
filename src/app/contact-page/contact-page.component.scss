@@ -10,7 +10,7 @@
   z-index: 3;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-between;
   padding: 20px;
   align-items: center;
   background: linear-gradient(-45deg, $main-color-black, $main-color-grey, $main-color-pink, $main-color-lighter-pink);

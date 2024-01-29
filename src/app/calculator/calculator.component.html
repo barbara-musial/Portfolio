@@ -1,0 +1,45 @@
+<div class="calculator">
+    <h2>Kalkulator usług</h2>
+    <label for="service-type">Rodzaj usługi:</label>
+    <select id="service-type" (change)="changeServiceType($event)">
+        <option value="" disabled selected hidden>Wybierz z listy</option>
+        <option value="{{ServiceType.SoftwareDevelopment}}">Tworzenie oprogramowania</option>
+        <option value="{{ServiceType.UXUIDesign}}">UI/UX Design</option>
+        <option value="{{ServiceType.Testing}}">Testowanie</option>
+    </select>
+
+    <div *ngIf=" serviceType === ServiceType.SoftwareDevelopment" id="second-question">
+        <label for="service-kind">Rodzaj oprogramowania:</label>
+        <select #serviceKind id="service-kind">
+            <option value="web-application">Aplikacja webowa</option>
+            <option value="website">Strona internetowa</option>
+        </select>
+    </div>
+
+    <div *ngIf="serviceType === ServiceType.UXUIDesign" id="third-question">
+        <label for="design-style">Styl projektu:</label>
+        <select #designStyle id="design-style">
+            <option value="" disabled selected hidden>Wybierz z listy</option>
+            <option value="modern">Nowoczesny</option>
+            <option value="minimalistic">Minimalistyczny</option>
+            <option value="custom">Indywidualny</option>
+        </select>
+    </div>
+
+    <div *ngIf="serviceType === ServiceType.UXUIDesign" id="fourth-question">
+        <label for="project-mocks">Ilość makiet:</label>
+        <input #numOfMocks type="number" id="project-mocks" placeholder="Liczba makiet" min="1">
+    </div>
+
+    <label for="project-complexity">Złożoność projektu</label>
+    <input #complexity type="number" id="project-complexity" placeholder="1 (małe) - 10 (duże)" min="1" max="10"
+           onKeyDown="return false">
+
+    <label for="project-duration">Czas trwania (dni):</label>
+    <input #duration type="number" id="project-duration" placeholder="Liczba dni" min="1">
+
+    <button (click)="calculateCost()">Oblicz koszt</button>
+
+    <h3>Estymowany koszt:</h3>
+    <p id="total-cost">{{ totalCost }} zł/h</p>
+</div>

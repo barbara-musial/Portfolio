@@ -4,6 +4,7 @@ import {NavigationBarComponent} from "../navigation-bar/navigation-bar.component
 import {TabType} from "../../enums/tabType.enum";
 import {NgClass, NgIf} from "@angular/common";
 import {CopyTooltipComponent} from "../copy-tooltip/copy-tooltip.component";
+import {CalculatorComponent} from "../calculator/calculator.component";
 
 @Component({
     selector: 'contact-page',
@@ -13,7 +14,8 @@ import {CopyTooltipComponent} from "../copy-tooltip/copy-tooltip.component";
         NavigationBarComponent,
         NgIf,
         NgClass,
-        CopyTooltipComponent
+        CopyTooltipComponent,
+        CalculatorComponent
     ],
     templateUrl: './contact-page.component.html',
     styleUrl: './contact-page.component.scss'

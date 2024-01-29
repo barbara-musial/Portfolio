@@ -5,9 +5,14 @@
 }
 
 .tooltip-wrapper {
+  padding: 10px;
   position: absolute;
-  bottom: calc(100% + 5px);
+  bottom: calc(100% + 5px - 10px);
   left: 0;
+
+  &:hover {
+    visibility: visible;
+  }
 
   .tooltip {
     position: relative;
