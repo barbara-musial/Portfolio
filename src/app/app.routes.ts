@@ -7,6 +7,9 @@ import {ProjectsPageComponent} from "./projects-page/projects-page.component";
 
 export const routes: Routes = [
     {
+        path: '', redirectTo: '/main-page', pathMatch: 'full'
+    },
+    {
         path: 'main-page', component: MainPageComponent
     },
     {
